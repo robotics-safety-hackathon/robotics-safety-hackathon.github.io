@@ -1,0 +1,152 @@
+[
+  {
+    "id": "pandroid-3-pantograph",
+    "label": "Pandroid 3",
+    "providerId": "pantograph",
+    "description": "Pandroid robot.",
+    "robotModel": "Pandroid 3",
+    "x": 8.9315,
+    "y": 18.9551,
+    "footprint": {
+      "x": 5.071229381021328,
+      "y": 19.309393969591046,
+      "width": 3.973778253505489,
+      "height": 9.212087827870178
+    }
+  },
+  {
+    "id": "pandroid-4-pantograph",
+    "label": "Pandroid 4",
+    "providerId": "pantograph",
+    "description": "Pandroid robot.",
+    "robotModel": "Pandroid 4",
+    "x": 19.0839,
+    "y": 18.6124,
+    "footprint": {
+      "x": 15.223652746222028,
+      "y": 18.96668236885185,
+      "width": 3.973778253505489,
+      "height": 9.212087827870178
+    }
+  },
+  {
+    "id": "yam-1-robocurve",
+    "label": "YAM 1",
+    "providerId": "robocurve",
+    "description": "Robot arms.",
+    "robotModel": "YAM",
+    "x": 18.9338,
+    "y": 29.5651,
+    "footprint": {
+      "x": 12.405476851159362,
+      "y": 29.919457731279042,
+      "width": 6.641886509430603,
+      "height": 10.865539489282773
+    }
+  },
+  {
+    "id": "yam-2-robocurve",
+    "label": "YAM 2",
+    "providerId": "robocurve",
+    "description": "Robot arms.",
+    "robotModel": "YAM",
+    "x": 9.2399,
+    "y": 43.281,
+    "footprint": {
+      "x": 5.379651085919801,
+      "y": 43.63532701436902,
+      "width": 3.973778253505489,
+      "height": 9.212087827870178
+    }
+  },
+  {
+    "id": "openyam-dimensional",
+    "label": "OpenYAM",
+    "providerId": "dimensional",
+    "description": "Robot arms.",
+    "robotModel": "OpenYAM",
+    "x": 18.9288,
+    "y": 42.5443,
+    "footprint": {
+      "x": 12.400457503266969,
+      "y": 42.89865075350206,
+      "width": 6.641886509430603,
+      "height": 10.865539489282773
+    }
+  },
+  {
+    "id": "nero-arms-markov",
+    "label": "Nero Arms",
+    "providerId": "markov",
+    "description": "Robot arms.",
+    "robotModel": "Nero Arms",
+    "x": 8.8758,
+    "y": 66.513,
+    "footprint": {
+      "x": 5.01555100087785,
+      "y": 66.86726664300173,
+      "width": 3.973778253505489,
+      "height": 9.212087827870178
+    }
+  },
+  {
+    "id": "unitree-go2-dimensional",
+    "label": "Unitree GO2 · Dimensional",
+    "providerId": "dimensional",
+    "description": "Quadruped robot.",
+    "robotModel": "Unitree GO2",
+    "x": 26.1332,
+    "y": 29.8612,
+    "footprint": {
+      "x": 19.604881271159893,
+      "y": 30.215474037048285,
+      "width": 6.641886509430603,
+      "height": 10.865539489282773
+    }
+  },
+  {
+    "id": "unitree-go2-pantheon",
+    "label": "Unitree GO2 · Pantheon",
+    "providerId": "pantheon",
+    "description": "Quadruped robot.",
+    "robotModel": "Unitree GO2",
+    "x": 26.0499,
+    "y": 41.2497,
+    "footprint": {
+      "x": 19.521536044660614,
+      "y": 41.60401051960474,
+      "width": 6.641886509430603,
+      "height": 10.865539489282773
+    }
+  },
+  {
+    "id": "unitree-g1-dimensional",
+    "label": "Unitree G1 · Dimensional",
+    "providerId": "dimensional",
+    "description": "Humanoid robot.",
+    "robotModel": "Unitree G1",
+    "x": 37.1146,
+    "y": 36.9113,
+    "footprint": {
+      "x": 28.996690918170504,
+      "y": 37.26558267215295,
+      "width": 8.231397810832798,
+      "height": 12.40088746059447
+    }
+  },
+  {
+    "id": "unitree-g1-pantheon",
+    "label": "Unitree G1 · Pantheon",
+    "providerId": "pantheon",
+    "description": "Humanoid robot.",
+    "robotModel": "Unitree G1",
+    "x": 36.199,
+    "y": 68.0747,
+    "footprint": {
+      "x": 28.081148870802053,
+      "y": 68.42904674836107,
+      "width": 8.231397810832798,
+      "height": 12.40088746059447
+    }
+  }
+]

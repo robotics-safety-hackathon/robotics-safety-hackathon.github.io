@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Robotics Safety Hackathon — sponsors, setup, robot stations, venue layout, and safety briefing.">
+  <title>Robotics Safety Hackathon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="access.js" defer></script>
+</head>
+<body class="access-locked">
+  <main id="access-gate" class="access-gate" aria-labelledby="access-title">
+    <img src="assets/robot-safety.svg" alt="" width="72" height="77">
+    <h1 id="access-title">Robotics Safety Hackathon</h1>
+    <form id="access-form" class="access-form">
+      <label for="access-password">Event password</label>
+      <input id="access-password" type="password" inputmode="numeric" autocomplete="current-password" aria-describedby="access-error" required autofocus>
+      <button id="access-submit" type="submit">Enter</button>
+      <p id="access-error" role="alert"></p>
+    </form>
+  </main>
+  <a class="skip-link" href="#presentation">Skip to presentation</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="event-brand" href="#welcome">Robotics Safety Hackathon</a>
+      <button class="icon-button" id="help-button" aria-label="Presenter keyboard shortcuts" aria-haspopup="dialog">?</button>
+    </header>
+
+    <main id="presentation" class="presentation" tabindex="-1" aria-label="Event presentation">
+      <section class="slide welcome active" id="welcome" data-title="Welcome" aria-labelledby="welcome-title">
+        <h1 id="welcome-title">Robotics Safety Hackathon</h1>
+        <img class="event-mark" src="assets/robot-safety.svg" alt="Robotic arm within a safe operating boundary" width="64" height="68">
+        <div class="welcome-sponsors">
+          <div id="welcome-sponsor-logos" class="welcome-sponsor-logos" role="group" aria-label="Event sponsors"></div>
+        </div>
+        <div id="idle-motion" class="idle-motion"></div>
+        <p class="idle-hint">Click or press → to begin</p>
+      </section>
+
+      <section class="slide sponsors-slide" id="sponsors" data-title="Sponsors" aria-labelledby="sponsors-title" hidden>
+        <h2 id="sponsors-title">Sponsors</h2>
+        <div id="sponsor-board" class="sponsor-board" aria-label="Sponsors by contribution"></div>
+      </section>
+
+      <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
+        <h2 id="judges-title">Judges</h2>
+        <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
+      </section>
+
+      <section class="slide" id="tech-setup" data-title="Setup" aria-labelledby="tech-title" hidden>
+        <h2 id="tech-title">Setup</h2>
+        <div class="setup-layout">
+          <div class="setup-instructions">
+            <dl class="wifi-details" aria-label="Event Wi-Fi">
+              <div><dt>Wi-Fi</dt><dd>Pantograph-Customer</dd></div>
+              <div><dt>Password</dt><dd>makeGoodThings</dd></div>
+            </dl>
+            <ul class="setup-checklist">
+              <li>Check your tools and compute access.</li>
+              <li>Meet your station lead.</li>
+            </ul>
+          </div>
+          <aside class="slack-join" id="slack-join" hidden aria-label="Event Slack"></aside>
+        </div>
+      </section>
+
+      <section class="slide robots-slide" id="robot-types" data-title="Robots" aria-labelledby="robots-title" hidden>
+        <h2 id="robots-title">Robots</h2>
+        <p class="section-description">Pandroids, YAM and OpenYAM arms, Nero Arms, Unitree G1, and Unitree GO2.</p>
+        <div id="robot-providers" class="robot-providers" aria-label="Robot providers"></div>
+      </section>
+
+      <section class="slide map-slide" id="map-layout" data-title="Layout" aria-labelledby="map-title" hidden>
+        <div class="section-heading"><h2 id="map-title">Layout</h2><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div>
+          <div class="map-panel">
+            <div class="map-figure" id="map-figure">
+              <img id="venue-map" src="assets/venue-map.svg" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
+              <div class="map-highlights" id="map-highlights"></div>
+              <div class="station-popup" id="station-popup" aria-hidden="true" hidden></div>
+              <div class="map-markers" id="map-markers"></div>
+            </div>
+            <div class="station-walkthrough" role="group" aria-label="Robot station walkthrough">
+              <span class="station-progress" data-station-progress>Loading stations…</span>
+              <div class="station-actions"><button class="station-step" data-station-step="-1" disabled>Previous station</button><button class="station-step" data-station-step="1" disabled>Next station</button></div>
+            </div>
+          </div>
+      </section>
+
+      <section class="slide demo-slide" id="harness-demo" data-title="Harness demo" aria-labelledby="demo-title" hidden>
+        <h2 id="demo-title">Harness demo</h2>
+        <figure class="harness-diagram" aria-label="Harness control and observations across the event's robot embodiments">
+          <div class="harness-console">
+            <svg viewBox="0 0 220 170" fill="none" aria-hidden="true">
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="12" y="12" width="196" height="142" rx="7"/>
+                <path d="M12 42h196" opacity=".3"/>
+                <path d="m36 67 12 10-12 10m27 0h20M36 112h111M36 128h73"/>
+              </g>
+              <g fill="currentColor" opacity=".35"><circle cx="27" cy="27" r="2"/><circle cx="38" cy="27" r="2"/><circle cx="49" cy="27" r="2"/></g>
+            </svg>
+            <span>Harness</span>
+          </div>
+          <div class="harness-link" aria-hidden="true">
+            <span>Control</span>
+            <svg viewBox="0 0 100 80" fill="none"><path d="M4 25h90m-7-7 7 7-7 7M94 55H4m7-7-7 7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Observations</span>
+          </div>
+          <div class="harness-models">
+            <figure><img src="assets/robot-illustrations/pandroid.svg" alt=""><figcaption>Pandroid</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/yam.svg" alt=""><figcaption>YAM</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/openyam.svg" alt=""><figcaption>OpenYAM</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/nero-arms.svg" alt=""><figcaption>Nero Arms</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/unitree-g1.svg" alt=""><figcaption>Unitree G1</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/unitree-go2.svg" alt=""><figcaption>Unitree GO2</figcaption></figure>
+          </div>
+        </figure>
+      </section>
+
+      <section class="slide" id="hardware-safety" data-title="Safety" aria-labelledby="safety-title" hidden>
+        <h2 id="safety-title">Safety</h2>
+        <div class="illustrated-layout">
+          <ul class="safety-list">
+            <li>Brief with your station lead.</li>
+            <li>Know the physical emergency stop.</li>
+            <li>Keep the operating area clear.</li>
+            <li>Stop if unsure. Alert your lead.</li>
+          </ul>
+          <figure class="technical-figure">
+            <img src="assets/robot-safety-diagram.svg" alt="YAM-inspired robot arm line drawing with briefing, stop-awareness, and clear-workspace symbols. Illustrative, not a stop-control location diagram.">
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="presenter-controls" aria-label="Presentation controls">
+      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="judges">Judges</button><button data-go="tech-setup">Setup</button><button data-go="robot-types">Robots</button><button data-go="map-layout">Layout</button><button data-go="harness-demo">Harness demo</button><button data-go="hardware-safety">Safety</button></nav>
+      <div class="utility-controls"><button id="idle-button" class="utility-button" aria-pressed="false" title="Enter idle screen (I)"><span>Idle screen</span></button><button id="motion-button" class="utility-button" aria-pressed="false" title="Pause sponsor strip"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span>Pause</span></button><button id="fullscreen-button" class="icon-button" title="Toggle fullscreen (F)" aria-label="Enter fullscreen">⛶</button><button id="previous-button" class="icon-button" aria-label="Previous section" title="Previous section (Left arrow)">←</button><span id="slide-counter" class="slide-counter" aria-live="polite">1 / 8</span><button id="next-button" class="icon-button" aria-label="Next section" title="Next section (Right arrow or Space)">→</button></div>
+    </footer>
+  </div>
+
+  <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-header"><h2 id="help-title">Keyboard shortcuts</h2><button id="close-help" class="icon-button" aria-label="Close keyboard shortcuts">×</button></div>
+    <dl><div><dt>Next / previous station or section</dt><dd><kbd>→</kbd> <kbd>←</kbd> / <kbd>Page Down</kbd> <kbd>Page Up</kbd></dd></div><div><dt>Next station or section</dt><dd><kbd>Space</kbd></dd></div><div><dt>Welcome</dt><dd><kbd>H</kbd> / <kbd>Home</kbd></dd></div><div><dt>Enter / leave idle screen</dt><dd><kbd>I</kbd></dd></div><div><dt>Leave idle screen</dt><dd><kbd>Esc</kbd></dd></div><div><dt>Fullscreen</dt><dd><kbd>F</kbd></dd></div><div><dt>This guide</dt><dd><kbd>?</kbd></dd></div></dl>
+    <p>Sponsors scroll on the welcome screen only. Pause holds the strip; reduced motion shows every sponsor in a static grid. Idle screen hides presenter controls: click the background or press → / Space to begin with Sponsors, or Escape to return to Welcome. Slides never advance automatically.</p>
+    <p>Layout walks through every station before Harness demo. Named section links jump directly; returning with Previous starts at the last station. In the expanded map, arrows stop at the first and last stations; use Close map or the labeled boundary button to continue. Space activates a focused button only once.</p>
+  </dialog>
+  <dialog id="map-dialog" class="map-dialog" aria-labelledby="expanded-map-title">
+    <div class="dialog-header"><h2 id="expanded-map-title">Layout</h2><div class="map-dialog-tools"><button id="map-zoom-out" class="icon-button" aria-label="Zoom map out">−</button><button id="map-zoom-in" class="icon-button" aria-label="Zoom map in">+</button><button data-close-dialog class="icon-button" aria-label="Close expanded map">×</button></div></div>
+    <div class="expanded-map-scroll"><div id="expanded-map-figure" class="expanded-map-figure">
+      <img src="assets/venue-map.svg" alt="Updated floorplan with company-labeled robot stations and You are here at the presentation area.">
+      <div class="map-highlights" id="expanded-map-highlights"></div>
+      <div class="station-popup" id="expanded-station-popup" aria-hidden="true" hidden></div>
+      <div id="expanded-map-markers" class="map-markers"></div>
+    </div></div>
+    <div class="station-walkthrough" role="group" aria-label="Expanded robot station walkthrough">
+      <span class="station-progress" data-station-progress>Loading stations…</span>
+      <div class="station-actions"><button class="station-step" data-station-step="-1" disabled>Previous station</button><button class="station-step" data-station-step="1" disabled>Next station</button></div>
+    </div>
+  </dialog>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-message">Enable JavaScript for section navigation and sponsor assets.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "pantograph",
+    "name": "Pantograph",
+    "groups": [
+      "partners"
+    ],
+    "logo": "assets/logos/pantograph.svg",
+    "png": "assets/logos/pantograph.png",
+    "background": "light"
+  },
+  {
+    "id": "robocurve",
+    "name": "Robocurve",
+    "groups": [
+      "partners",
+      "robots"
+    ],
+    "logo": "assets/logos/robocurve.svg",
+    "png": "assets/logos/robocurve.png",
+    "background": "light"
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "groups": [
+      "compute"
+    ],
+    "logo": "assets/logos/openai.svg",
+    "png": "assets/logos/openai.png",
+    "background": "light"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "groups": [
+      "compute"
+    ],
+    "logo": "assets/logos/anthropic.svg",
+    "png": "assets/logos/anthropic.png",
+    "background": "light"
+  },
+  {
+    "id": "markov",
+    "name": "Markov.inc",
+    "groups": [
+      "robots"
+    ],
+    "logo": "assets/logos/markov.svg",
+    "png": "assets/logos/markov.png",
+    "background": "light"
+  },
+  {
+    "id": "pantheon",
+    "name": "Pantheon",
+    "groups": [
+      "robots"
+    ],
+    "logo": "assets/logos/pantheon.svg",
+    "png": "assets/logos/pantheon.png",
+    "lightPng": "assets/logos/pantheon-light.png",
+    "background": "dark"
+  },
+  {
+    "id": "dimensional",
+    "name": "Dimensional",
+    "groups": [
+      "robots"
+    ],
+    "logo": "assets/logos/dimensional.png",
+    "png": "assets/logos/dimensional.png",
+    "lightPng": "assets/logos/dimensional-light.png",
+    "background": "dark"
+  },
+  {
+    "id": "bluedot",
+    "name": "BlueDot",
+    "groups": [
+      "funding"
+    ],
+    "logo": "assets/logos/bluedot.svg",
+    "png": "assets/logos/bluedot.png",
+    "lightPng": "assets/logos/bluedot-light.png",
+    "background": "dark"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "organizations": [
+    {
+      "id": "pantograph",
+      "name": "Pantograph",
+      "logo": "assets/logos/pantograph.svg",
+      "judges": [
+        {
+          "name": "Alex Gajewski"
+        }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "logo": "assets/logos/anthropic.svg",
+      "judges": [
+        {
+          "name": "Michael Ilie"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "logo": "assets/logos/openai.svg",
+      "judges": [
+        {
+          "name": "Valerio Pepe"
+        }
+      ]
+    },
+    {
+      "id": "markov",
+      "name": "Markov Robotics",
+      "logo": "assets/logos/markov.svg",
+      "judges": [
+        {
+          "name": "Atharva Gundawar"
+        }
+      ]
+    },
+    {
+      "id": "robocurve",
+      "name": "Robocurve",
+      "logo": "assets/logos/robocurve.svg",
+      "judges": [
+        {
+          "name": "Achu Menon"
+        }
+      ]
+    }
+  ]
+}

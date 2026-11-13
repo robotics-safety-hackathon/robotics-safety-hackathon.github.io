@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" fill="none">
+  <title>Robot arm safety briefing</title>
+  <desc>Simplified line illustration referenced from I2RT's official YAM photograph. A person, stop symbol, and marked operating boundary represent briefing, stop awareness, and a clear workspace. Not a technical or emergency-stop location diagram.</desc>
+  <g stroke="#d0d0d0" stroke-width="1.4" stroke-dasharray="5 7"><rect x="53" y="124" width="394" height="280" rx="24"/></g>
+  <g transform="translate(60 122) scale(.72)" stroke="#171717" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="white">
+    <path d="M216 358h72l9 8v12h-91v-12Z"/><path d="M206 366h91M221 357v-36c0-7 60-7 60 0v36M221 322c0 7 60 7 60 0"/>
+    <path d="m232 318-22-20 12-45 30-5 25 19c17 13 19 35 3 47Z"/><path d="m222 253 23 19-13 46M245 272l32-5"/>
+    <ellipse cx="231" cy="286" rx="14" ry="18" transform="rotate(17 231 286)"/><ellipse cx="231" cy="286" rx="5" ry="7" transform="rotate(17 231 286)"/>
+    <path d="m216 266-93-94 15-23 102 101M128 170l91 90M138 149l99 98"/>
+    <path d="m123 184-17-9c-10-6-12-19-10-30l6-48 22-3 22 44-8 28Z"/><path d="m102 97 22 41-1 46M124 94l22 44"/><ellipse cx="115" cy="154" rx="6" ry="10"/>
+    <path d="m125 101 108-54 19 34-111 54M135 108l104-51M141 128l106-51"/>
+    <path d="m230 47 26-8 40 19-14 42-29-11Z"/><path d="m256 39 13 40 13 21M269 79l27-21"/><ellipse cx="253" cy="62" rx="8" ry="11" transform="rotate(-19 253 62)"/>
+    <path d="m282 62 35 9c15 4 18 29 7 35l-42-12M315 72c-9 5-9 24 1 31"/>
+    <path d="m318 79 17-3 35 15 29 38-42 3-29-21Z"/><path d="m338 84 21 38 29-1-24-24ZM329 91l-7 20 35 21M345 101l-7 13 15 8"/>
+    <path d="m274 50 8-31c2-7 35 2 34 8l-8 34M282 19c-1 6 32 14 34 8M279 33l32 10"/>
+  </g>
+  <g stroke="#171717" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="white">
+    <circle cx="59" cy="62" r="25"/><circle cx="59" cy="55" r="6"/><path d="M47 72v-3c0-9 24-9 24 0v3"/>
+    <path d="m428 38 17 7 7 17-7 17-17 7-17-7-7-17 7-17Z"/><rect x="421" y="55" width="14" height="14" rx="1"/>
+  </g>
+  <g fill="#555" font-family="Helvetica Neue,Arial,sans-serif" font-size="16" text-anchor="middle"><text x="59" y="108">Briefing</text><text x="428" y="108">Know the stop</text><text x="250" y="430">Keep the operating area clear</text></g>
+  <path d="M205 411h90" stroke="#bbb" stroke-width="1.3"/>
+</svg>
