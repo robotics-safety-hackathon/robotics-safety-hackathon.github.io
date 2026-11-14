@@ -191,11 +191,11 @@
     else goToSlide(slideFromURL(), false);
   }
 
-  function createLogo(sponsor, className, withName = true) {
+  function createLogo(sponsor, className, withName = true, imageSource = sponsor.lightPng || sponsor.png || sponsor.logo) {
     const surface = element('div', `${className} logo-surface`);
     surface.dataset.sponsor = sponsor.id;
     const image = element('img');
-    image.src = sponsor.lightPng || sponsor.png || sponsor.logo;
+    image.src = imageSource;
     image.alt = withName ? '' : sponsor.name;
     image.draggable = false;
     image.addEventListener('error', () => {
@@ -268,7 +268,7 @@
       group.setAttribute('role', 'list');
       if (copy === 1) group.setAttribute('aria-hidden', 'true');
       sponsors.forEach((sponsor) => {
-        const logo = createLogo(sponsor, 'welcome-logo', ['pantograph', 'robocurve', 'markov'].includes(sponsor.id));
+        const logo = createLogo(sponsor, 'welcome-logo', false, sponsor.welcomeLogo);
         logo.setAttribute('role', 'listitem');
         logo.append(element('span', 'sponsor-role', sponsor.groups.map((role) => roles[role]).join('\n')));
         group.append(logo);
@@ -556,7 +556,7 @@
 
   async function loadAssets() {
     const results = await Promise.allSettled([
-      loadJSON('assets/sponsors.json?v=meeting-notes'),
+      loadJSON('assets/sponsors.json?v=official-wordmarks'),
       loadJSON('assets/stations.json?v=layout-privacy'),
       loadJSON('assets/event-details.json', false),
       loadJSON('assets/judges.json', false)
