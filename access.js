@@ -15,7 +15,7 @@
     button.disabled = true;
     button.textContent = 'Opening…';
     const script = document.createElement('script');
-    script.src = 'app.js?v=infra-clean';
+    script.src = 'app.js?v=page-flip';
     script.onload = () => {
       try { sessionStorage.setItem(key, '1'); } catch { /* Storage may be disabled. */ }
       document.getElementById('access-gate').hidden = true;

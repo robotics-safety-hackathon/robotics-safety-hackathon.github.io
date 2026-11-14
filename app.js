@@ -6,10 +6,9 @@
   const capture = params.get('capture') === '1';
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const groups = [
-    { id: 'partners', label: 'Partners' },
-    { id: 'compute', label: 'Model credits' },
-    { id: 'models', label: 'Models only' },
-    { id: 'robots', label: 'Robots' },
+    { id: 'partners', label: 'Co-organizers' },
+    { id: 'compute', label: 'Model credits & evaluation' },
+    { id: 'robots', label: 'Robot providers' },
     { id: 'funding', label: 'Funding' }
   ];
   const $ = (id) => document.getElementById(id);
@@ -88,7 +87,7 @@
     }
     updateNavigationControls();
     $('slide-counter').textContent = `${current + 1} / ${slides.length}`;
-    document.title = `${slides[current].dataset.title} — Robotics Safety Hackathon`;
+    document.title = `${slides[current].dataset.title} — Robot Safety Hackathon`;
     document.body.dataset.slide = String(current + 1);
     if (updateURL) {
       const url = new URL(location.href);
@@ -128,7 +127,7 @@
       selectStation(stations[next].id);
     } else if (allowExit) {
       if ($('map-dialog').open) $('map-dialog').close();
-      goToSlide(direction > 0 ? slideIndex('harness-demo') : slideIndex('map-layout') - 1);
+      goToSlide(slideIndex('map-layout') + direction);
     }
   }
 
@@ -137,7 +136,7 @@
     const inLayout = slides[current].id === 'map-layout' && index !== -1;
     const previousSection = slides[slideIndex('map-layout') - 1].dataset.title;
     const previousLabel = index > 0 ? `Previous: ${stations[index - 1].label}` : `Back: ${previousSection}`;
-    const nextLabel = index >= 0 && index < stations.length - 1 ? `Next: ${stations[index + 1].label}` : 'Next: Infra onboarding';
+    const nextLabel = index >= 0 && index < stations.length - 1 ? `Next: ${stations[index + 1].label}` : `Next: ${slides[slideIndex('map-layout') + 1].dataset.title}`;
     $('previous-button').disabled = current === 0;
     $('next-button').disabled = current === slides.length - 1;
     for (const [id, label, key] of [
@@ -228,17 +227,28 @@
     const board = $('sponsor-board');
     board.replaceChildren();
     groups.forEach((group) => {
-      const members = sponsorsFor(group.id);
+      const members = group.id === 'compute' ? sponsors.filter((sponsor) => sponsor.groups.some((role) => role === 'compute' || role === 'models')) : sponsorsFor(group.id);
       const section = element('section', 'sponsor-group');
       section.dataset.group = group.id;
       section.setAttribute('aria-label', group.label);
       const label = element('div', 'sponsor-group-label');
       label.textContent = group.label;
       const logos = element('div', 'sponsor-group-logos');
-      members.forEach((sponsor) => logos.append(createLogo(sponsor, 'sponsor-logo')));
+      members.forEach((sponsor) => {
+        const logo = createLogo(sponsor, 'sponsor-logo', ['pantograph', 'robocurve', 'markov'].includes(sponsor.id));
+        if (sponsor.id === 'google-deepmind') {
+          logo.classList.add('independent-model');
+          logo.append(element('span', 'model-note-mark', '*'));
+          logo.setAttribute('aria-describedby', 'model-evaluation-note');
+        }
+        logos.append(logo);
+      });
       section.append(label, logos);
       board.append(section);
     });
+    const note = element('p', 'model-evaluation-note', '* Google DeepMind models evaluated independently.');
+    note.id = 'model-evaluation-note';
+    board.append(note);
     const providers = $('robot-providers');
     providers.replaceChildren();
     sponsorsFor('robots').forEach((sponsor) => {
@@ -260,7 +270,7 @@
   }
 
   function renderSponsorStrip() {
-    const roles = { partners: 'Partner', compute: 'Model credits', models: 'Models only', robots: 'Robot provider', funding: 'Funding' };
+    const roles = { partners: 'Co-organizer', compute: 'Model credits', models: 'Models evaluated', robots: 'Robot provider', funding: 'Funding' };
     const track = element('div', 'sponsor-track');
     // Equal-width copies include their trailing gap, so -50% is one exact loop.
     for (let copy = 0; copy < 2; copy += 1) {
@@ -270,7 +280,7 @@
       sponsors.forEach((sponsor) => {
         const logo = createLogo(sponsor, 'welcome-logo', false);
         logo.setAttribute('role', 'listitem');
-        logo.append(element('span', 'sponsor-role', sponsor.groups.map((role) => roles[role]).join(' · ')));
+        logo.append(element('span', 'sponsor-role', sponsor.groups.map((role) => roles[role]).join('\n')));
         group.append(logo);
       });
       track.append(group);
