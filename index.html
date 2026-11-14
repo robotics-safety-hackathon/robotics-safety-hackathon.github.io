@@ -7,7 +7,7 @@
   <meta name="description" content="Robotics Safety Hackathon — research, sponsors, Wi-Fi, safety, robot access, and misalignment eval categories.">
   <title>Robotics Safety Hackathon</title>
   <link rel="stylesheet" href="style.css?v=clean-headers">
-  <script src="access.js?v=infra-onboarding" defer></script>
+  <script src="access.js?v=infra-clean" defer></script>
 </head>
 <body class="access-locked">
   <main id="access-gate" class="access-gate" aria-labelledby="access-title">
@@ -108,8 +108,8 @@
           </div>
       </section>
 
-      <section class="slide demo-slide" id="harness-demo" data-title="Harness demo + infra onboarding" aria-labelledby="demo-title" hidden>
-        <div class="section-heading"><h2 id="demo-title">Harness demo + infra onboarding</h2></div>
+      <section class="slide demo-slide" id="harness-demo" data-title="Infra onboarding" aria-labelledby="demo-title" hidden>
+        <div class="section-heading"><h2 id="demo-title">Infra onboarding</h2></div>
         <figure class="harness-diagram" aria-label="Harness control and observations across the event's robot embodiments">
           <div class="harness-console">
             <svg viewBox="0 0 220 170" fill="none" aria-hidden="true">
@@ -192,7 +192,7 @@
     </main>
 
     <footer class="presenter-controls" aria-label="Presentation controls">
-      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="research-question">Research</button><button data-go="tech-setup">Wi-Fi</button><button data-go="hardware-safety">Safety</button><button data-go="map-layout">Layout</button><button data-go="harness-demo">Harness + infra</button><button data-go="robot-types">Robot access</button><button data-go="eval-categories">Evals</button><button data-go="judges">Judges</button></nav>
+      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="research-question">Research</button><button data-go="tech-setup">Wi-Fi</button><button data-go="hardware-safety">Safety</button><button data-go="map-layout">Layout</button><button data-go="harness-demo">Infra onboarding</button><button data-go="robot-types">Robot access</button><button data-go="eval-categories">Evals</button><button data-go="judges">Judges</button></nav>
       <div class="utility-controls"><button id="idle-button" class="utility-button" aria-pressed="false" title="Enter idle screen (I)"><span>Idle screen</span></button><button id="motion-button" class="utility-button" aria-pressed="false" title="Pause sponsor strip"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span>Pause</span></button><button id="fullscreen-button" class="icon-button" title="Toggle fullscreen (F)" aria-label="Enter fullscreen">⛶</button><button id="previous-button" class="icon-button" aria-label="Previous section" title="Previous section (Left arrow)">←</button><span id="slide-counter" class="slide-counter" aria-live="polite">1 / 10</span><button id="next-button" class="icon-button" aria-label="Next section" title="Next section (Right arrow or Space)">→</button></div>
     </footer>
   </div>
@@ -201,7 +201,7 @@
     <div class="dialog-header"><h2 id="help-title">Keyboard shortcuts</h2><button id="close-help" class="icon-button" aria-label="Close keyboard shortcuts">×</button></div>
     <dl><div><dt>Next / previous station or section</dt><dd><kbd>→</kbd> <kbd>←</kbd> / <kbd>Page Down</kbd> <kbd>Page Up</kbd></dd></div><div><dt>Next station or section</dt><dd><kbd>Space</kbd></dd></div><div><dt>Welcome</dt><dd><kbd>H</kbd> / <kbd>Home</kbd></dd></div><div><dt>Enter / leave idle screen</dt><dd><kbd>I</kbd></dd></div><div><dt>Leave idle screen</dt><dd><kbd>Esc</kbd></dd></div><div><dt>Fullscreen</dt><dd><kbd>F</kbd></dd></div><div><dt>This guide</dt><dd><kbd>?</kbd></dd></div></dl>
     <p>Sponsors scroll on the welcome screen only. Pause holds the strip; reduced motion shows every sponsor in a static grid. Idle screen hides presenter controls: click the background or press → / Space to begin with Sponsors, or Escape to return to Welcome. Slides never advance automatically.</p>
-    <p>Layout walks through every station before the harness demo and infrastructure onboarding. Named section links jump directly; returning with Previous starts at the last station. In the expanded map, arrows stop at the first and last stations; use Close map or the labeled boundary button to continue. Space activates a focused button only once.</p>
+    <p>Layout walks through every station before infrastructure onboarding. Named section links jump directly; returning with Previous starts at the last station. In the expanded map, arrows stop at the first and last stations; use Close map or the labeled boundary button to continue. Space activates a focused button only once.</p>
   </dialog>
   <dialog id="map-dialog" class="map-dialog" aria-labelledby="expanded-map-title">
     <div class="dialog-header"><h2 id="expanded-map-title">Layout</h2><div class="map-dialog-tools"><button id="map-zoom-out" class="icon-button" aria-label="Zoom map out">−</button><button id="map-zoom-in" class="icon-button" aria-label="Zoom map in">+</button><button data-close-dialog class="icon-button" aria-label="Close expanded map">×</button></div></div>

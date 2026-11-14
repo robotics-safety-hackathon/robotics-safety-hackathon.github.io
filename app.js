@@ -137,7 +137,7 @@
     const inLayout = slides[current].id === 'map-layout' && index !== -1;
     const previousSection = slides[slideIndex('map-layout') - 1].dataset.title;
     const previousLabel = index > 0 ? `Previous: ${stations[index - 1].label}` : `Back: ${previousSection}`;
-    const nextLabel = index >= 0 && index < stations.length - 1 ? `Next: ${stations[index + 1].label}` : 'Next: Harness + infra';
+    const nextLabel = index >= 0 && index < stations.length - 1 ? `Next: ${stations[index + 1].label}` : 'Next: Infra onboarding';
     $('previous-button').disabled = current === 0;
     $('next-button').disabled = current === slides.length - 1;
     for (const [id, label, key] of [
