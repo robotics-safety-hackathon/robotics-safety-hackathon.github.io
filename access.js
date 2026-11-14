@@ -15,7 +15,7 @@
     button.disabled = true;
     button.textContent = 'Opening…';
     const script = document.createElement('script');
-    script.src = 'app.js?v=single-arm';
+    script.src = 'app.js?v=infra-onboarding';
     script.onload = () => {
       try { sessionStorage.setItem(key, '1'); } catch { /* Storage may be disabled. */ }
       document.getElementById('access-gate').hidden = true;
