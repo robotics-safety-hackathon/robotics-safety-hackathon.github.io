@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1761.5477144012539" height="846.7135947620844" viewBox="0 0 1761.5477144012539 846.7135947620844">
   <title>Robot Safety Hackathon participant floorplan</title>
-  <desc>Nine robot stations in the left robot room, with the bottom hall connecting to the presentation area. Pale-yellow hatched room silhouettes are not participant areas.</desc>
+  <desc>Nine robot stations in the left robot room, connected to the presentation area by open hallways. Individual restricted rooms and work areas have pale-yellow hatching; confidential interior details are omitted.</desc>
   <rect width="1761.5477144012539" height="846.7135947620844" fill="white" />
   <defs>
     <pattern id="restricted-hatching" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -9,10 +9,23 @@
     </pattern>
   </defs>
   <g transform="scale(1.1234360423477385)" stroke-linejoin="round">
-    <path d="M331 104H1499V494H1323V525H1237L1147 470V565H1136V663H827V616H679V271H434V170H331Z" fill="url(#restricted-hatching)" stroke="#b8ae86" stroke-width="2" />
-    <path d="M1297 616H1499V739H1297Z" fill="url(#restricted-hatching)" stroke="#b8ae86" stroke-width="2" />
-    <path d="M88 604H202L268 673H88Z" fill="url(#restricted-hatching)" stroke="#b8ae86" stroke-width="2" />
-    <path d="M88 104H331M88 104V604M202 604L346 754M331 104V170H434V271H679M679 271V370M679 399V509M679 509V620M679 648V663H539M485 663H469L428 620V585M439 494V585M439 370V443M453 271V370H439M469 663H428M393 682L362 731M377 754L392 775M539 663H659M705 663H827M827 663H936M985 663H1084M1134 663H1187M1241 663H1297M498 739H650M708 739H938M987 739H1095M1142 739H1297M1297 606H1499M1499 494V478" fill="none" stroke="#333" stroke-width="4" />
+    <g fill="url(#restricted-hatching)" stroke="#96917e" stroke-width="2">
+      <path d="M331 104H679V271H434V170H331Z" />
+      <path d="M679 104H911V144H679Z" />
+      <path d="M679 144H911V284H679Z" />
+      <path d="M997 104H1146V191H997Z" />
+      <path d="M1146 104H1262V234H1175V191H1146Z" />
+      <path d="M1262 104H1499V235H1262Z" />
+      <path d="M679 284H911V191H1086V234H1147V470H793V510H679Z" />
+      <path d="M1258 284H1482V354H1258Z" />
+      <path d="M679 510H791V616H679Z" />
+      <path d="M852 541H1084V565H852Z" />
+      <path d="M827 565H982V663H827Z" />
+      <path d="M982 565H1136V663H982Z" />
+      <path d="M1357 616H1499V726H1357Z" />
+      <path d="M88 604H202L268 673H88Z" />
+    </g>
+    <path d="M88 104H1499V370M88 104V604M202 604L346 754M331 104V170H434V271H679M679 271V370M679 399V509M679 509V620M679 648V663H539M485 663H469L428 620V585M439 494V585M439 370V443M453 271V370H439M469 663H428M393 682L362 731M377 754L392 775M539 663H659M705 663H827M827 663H936M985 663H1084M1134 663H1187M1241 663H1297M498 739H650M708 739H938M987 739H1095M1142 739H1499V616M1297 606H1499M1499 494V478M791 540H827V565" fill="none" stroke="#333" stroke-width="4" />
   </g>
   <rect x="1487.247003349205" y="555.1233103024592" width="224.6071734131444" height="124.14544137009588" fill="#e9e9e9" stroke="#aaaaaa" stroke-width="1" transform="rotate(0.0 1599.550590055777 617.1960309875071)" />
   <rect x="1571.3484943010453" y="643.7566725368563" width="56" height="18" fill="#e9e9e9" stroke="#aaaaaa" stroke-width="1" transform="rotate(0.0 1599.3484943010453 652.7566725368563)" />
