@@ -30,7 +30,7 @@
     Pandroid: 'pandroid.svg',
     YAM: 'yam.svg',
     OpenYAM: 'openyam.svg',
-    'Nero Arms': 'nero-arms.svg',
+    'Nero Arm': 'nero-arm.svg',
     'Unitree G1': 'unitree-g1.svg',
     'Unitree GO2': 'unitree-go2.svg'
   };
@@ -560,7 +560,7 @@
   async function loadAssets() {
     const results = await Promise.allSettled([
       loadJSON('assets/sponsors.json?v=meeting-notes'),
-      loadJSON('assets/stations.json'),
+      loadJSON('assets/stations.json?v=single-arm'),
       loadJSON('assets/event-details.json', false),
       loadJSON('assets/judges.json', false)
     ]);

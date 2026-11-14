@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Robotics Safety Hackathon — research, sponsors, Wi-Fi, safety, robot access, and misalignment eval categories.">
   <title>Robotics Safety Hackathon</title>
-  <link rel="stylesheet" href="style.css?v=meeting-notes">
-  <script src="access.js?v=meeting-notes" defer></script>
+  <link rel="stylesheet" href="style.css?v=clean-headers">
+  <script src="access.js?v=single-arm" defer></script>
 </head>
 <body class="access-locked">
   <main id="access-gate" class="access-gate" aria-labelledby="access-title">
@@ -79,7 +79,7 @@
 
 
       <section class="slide" id="hardware-safety" data-title="Safety" aria-labelledby="safety-title" hidden>
-        <div class="section-heading"><h2 id="safety-title">Safety</h2><span class="presenter-credit">Mason or Aiden</span></div>
+        <div class="section-heading"><h2 id="safety-title">Safety</h2></div>
         <div class="illustrated-layout">
           <ul class="safety-list">
             <li>Brief with your station lead.</li>
@@ -93,10 +93,10 @@
         </div>
       </section>
       <section class="slide map-slide" id="map-layout" data-title="Layout" aria-labelledby="map-title" hidden>
-        <div class="section-heading"><h2 id="map-title">Layout</h2><div class="map-heading-actions"><span class="presenter-credit">Walkthrough · Aiden</span><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div></div>
+        <div class="section-heading"><h2 id="map-title">Layout</h2><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div>
           <div class="map-panel">
             <div class="map-figure" id="map-figure">
-              <img id="venue-map" src="assets/venue-map.svg" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
+              <img id="venue-map" src="assets/venue-map.svg?v=single-arm" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
               <div class="map-highlights" id="map-highlights"></div>
               <div class="station-popup" id="station-popup" aria-hidden="true" hidden></div>
               <div class="map-markers" id="map-markers"></div>
@@ -109,7 +109,7 @@
       </section>
 
       <section class="slide demo-slide" id="harness-demo" data-title="Harness demo" aria-labelledby="demo-title" hidden>
-        <div class="section-heading"><h2 id="demo-title">Harness demo</h2><span class="presenter-credit">Aiden</span></div>
+        <div class="section-heading"><h2 id="demo-title">Harness demo</h2></div>
         <figure class="harness-diagram" aria-label="Harness control and observations across the event's robot embodiments">
           <div class="harness-console">
             <svg viewBox="0 0 220 170" fill="none" aria-hidden="true">
@@ -131,7 +131,7 @@
             <figure><img src="assets/robot-illustrations/pandroid.svg" alt=""><figcaption>Pandroid</figcaption></figure>
             <figure><img src="assets/robot-illustrations/yam.svg" alt=""><figcaption>YAM</figcaption></figure>
             <figure><img src="assets/robot-illustrations/openyam.svg" alt=""><figcaption>OpenYAM</figcaption></figure>
-            <figure><img src="assets/robot-illustrations/nero-arms.svg" alt=""><figcaption>Nero Arms</figcaption></figure>
+            <figure><img src="assets/robot-illustrations/nero-arm.svg" alt=""><figcaption>Nero Arm</figcaption></figure>
             <figure><img src="assets/robot-illustrations/unitree-g1.svg" alt=""><figcaption>Unitree G1</figcaption></figure>
             <figure><img src="assets/robot-illustrations/unitree-go2.svg" alt=""><figcaption>Unitree GO2</figcaption></figure>
           </div>
@@ -151,7 +151,7 @@
       </section>
 
       <section class="slide eval-slide" id="eval-categories" data-title="Eval categories" aria-labelledby="eval-title" hidden>
-        <div class="section-heading"><h2 id="eval-title">Eval categories</h2><span class="presenter-credit">Edward</span></div>
+        <div class="section-heading"><h2 id="eval-title">Eval categories</h2></div>
         <div class="eval-grid">
           <section class="eval-group" aria-labelledby="eval-input">
             <h3 id="eval-input">Input info</h3>
@@ -186,7 +186,7 @@
       </section>
 
       <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
-        <div class="section-heading"><h2 id="judges-title">Judges</h2><span class="presenter-credit">Judging · Edward</span></div>
+        <div class="section-heading"><h2 id="judges-title">Judges</h2></div>
         <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
       </section>
     </main>
@@ -206,7 +206,7 @@
   <dialog id="map-dialog" class="map-dialog" aria-labelledby="expanded-map-title">
     <div class="dialog-header"><h2 id="expanded-map-title">Layout</h2><div class="map-dialog-tools"><button id="map-zoom-out" class="icon-button" aria-label="Zoom map out">−</button><button id="map-zoom-in" class="icon-button" aria-label="Zoom map in">+</button><button data-close-dialog class="icon-button" aria-label="Close expanded map">×</button></div></div>
     <div class="expanded-map-scroll"><div id="expanded-map-figure" class="expanded-map-figure">
-      <img src="assets/venue-map.svg" alt="Updated floorplan with company-labeled robot stations and You are here at the presentation area.">
+      <img src="assets/venue-map.svg?v=single-arm" alt="Updated floorplan with company-labeled robot stations and You are here at the presentation area.">
       <div class="map-highlights" id="expanded-map-highlights"></div>
       <div class="station-popup" id="expanded-station-popup" aria-hidden="true" hidden></div>
       <div id="expanded-map-markers" class="map-markers"></div>

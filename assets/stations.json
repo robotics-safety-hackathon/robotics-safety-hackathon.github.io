@@ -75,11 +75,11 @@
     }
   },
   {
-    "id": "nero-arms-markov",
-    "label": "Nero Arms",
+    "id": "nero-arm-markov",
+    "label": "Nero Arm",
     "providerId": "markov",
-    "description": "Robot arms.",
-    "robotModel": "Nero Arms",
+    "description": "Single robot arm.",
+    "robotModel": "Nero Arm",
     "x": 8.8758,
     "y": 66.513,
     "footprint": {
