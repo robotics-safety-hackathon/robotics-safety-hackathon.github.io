@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Robot Safety Hackathon — research, sponsors, Wi-Fi, safety, robot access, and alignment eval categories.">
   <title>Robot Safety Hackathon</title>
-  <link rel="stylesheet" href="style.css?v=prizes">
-  <script src="access.js?v=page-flip" defer></script>
+  <link rel="stylesheet" href="style.css?v=layout-privacy">
+  <script src="access.js?v=layout-privacy" defer></script>
 </head>
 <body class="access-locked">
   <main id="access-gate" class="access-gate" aria-labelledby="access-title">
@@ -41,15 +41,11 @@
         <h2 id="sponsors-title">Sponsors</h2>
         <div id="sponsor-board" class="sponsor-board" aria-label="Sponsors by contribution"></div>
       </section>
-      <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
-        <div class="section-heading"><h2 id="judges-title">Judges</h2></div>
-        <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
-      </section>
 
       <section class="slide prizes-slide" id="prizes" data-title="Prizes" aria-labelledby="prizes-title" hidden>
         <h2 id="prizes-title">Prizes</h2>
         <table class="prize-table" aria-label="Prizes by placement">
-          <thead><tr><th scope="col">Placement</th><th scope="col">Dream-1 credits</th><th scope="col">Twelve Labs Pegasus</th></tr></thead>
+          <thead><tr><th scope="col">Placement</th><th scope="col"><img class="prize-provider-logo" src="assets/logos/dreamlabs.svg" alt="Dream Labs"><span>Dream-1 credits</span></th><th scope="col"><img class="prize-provider-logo" src="assets/logos/twelvelabs.svg" alt="Twelve Labs"><span>Pegasus</span></th></tr></thead>
           <tbody>
             <tr><th scope="row">1st place</th><td>$2,000</td><td>1,000 hours</td></tr>
             <tr><th scope="row">2nd place</th><td>$1,000</td><td>500 hours</td></tr>
@@ -60,8 +56,8 @@
         <div class="winning-team-prizes">
           <h3>Winning team also receives</h3>
           <div class="prize-extras">
-            <p><strong>1 year of ChatGPT Pro</strong><span>For one randomly chosen member of the winning team.</span></p>
-            <p><strong>$1,000 in Anthropic API credits</strong><span>For the winning team.</span></p>
+            <p><img class="prize-provider-logo" src="assets/logos/openai.svg" alt="OpenAI"><strong>1 year of ChatGPT Pro</strong><span>For one randomly chosen member of the winning team.</span></p>
+            <p><img class="prize-provider-logo" src="assets/logos/anthropic.svg" alt="Anthropic"><strong>$1,000 in API credits</strong><span>For the winning team.</span></p>
           </div>
         </div>
       </section>
@@ -77,7 +73,7 @@
         <div class="organizers" aria-label="Co-organizers">
           <p><strong>Camille Fassett</strong><span>Pantograph</span></p>
           <p><strong>Xavier Roberts-Gaal</strong><span>OpenAI safety fellow · Harvard</span></p>
-          <p><strong>Edward Sun</strong><span>OpenAI / MATS Fellow · formerly Anthropic Fellow</span></p>
+          <p><strong>Edward Sun</strong><span>OpenAI / MATS Fellow · ex-Anthropic Fellow</span></p>
         </div>
       </section>
       <section class="slide eval-slide" id="eval-categories" data-title="Eval categories" aria-labelledby="eval-title" hidden>
@@ -113,6 +109,10 @@
             </ol>
           </section>
         </div>
+      </section>
+      <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
+        <div class="section-heading"><h2 id="judges-title">Judges</h2></div>
+        <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
       </section>
 
       <section class="slide" id="tech-setup" data-title="Wi-Fi" aria-labelledby="tech-title" hidden>
@@ -180,14 +180,10 @@
         <div class="section-heading"><h2 id="map-title">Layout</h2><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div>
           <div class="map-panel">
             <div class="map-figure" id="map-figure">
-              <img id="venue-map" src="assets/venue-map.svg?v=single-arm" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
+              <img id="venue-map" src="assets/venue-map.svg?v=layout-privacy" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
               <div class="map-highlights" id="map-highlights"></div>
               <div class="station-popup" id="station-popup" aria-hidden="true" hidden></div>
               <div class="map-markers" id="map-markers"></div>
-            </div>
-            <div class="station-walkthrough" role="group" aria-label="Robot station walkthrough">
-              <span class="station-progress" data-station-progress>Loading stations…</span>
-              <div class="station-actions"><button class="station-step" data-station-step="-1" disabled>Previous station</button><button class="station-step" data-station-step="1" disabled>Next station</button></div>
             </div>
           </div>
       </section>
@@ -195,7 +191,7 @@
       <section class="slide robots-slide" id="robot-types" data-title="Robot access" aria-labelledby="robots-title" hidden>
         <h2 id="robots-title">Robot access</h2>
         <ol class="access-steps">
-          <li>Reserve a robot slot.</li>
+          <li>Reserve a robot in Slack.</li>
           <li>Alternate robot time with free model access.</li>
           <li>Record interesting observations.</li>
         </ol>
@@ -208,12 +204,13 @@
       <section class="slide communication-policy" id="communication-policy" data-title="Communication policy" aria-labelledby="communication-title" hidden>
         <h2 id="communication-title">Communication policy</h2>
         <div class="policy-message">
-          <p class="policy-instruction">Please don’t post publicly about the hackathon until we do.</p>
-          <p class="policy-embargo">Participation agreement embargo · End date to be confirmed</p>
+          <p class="policy-instruction">No public posts about the hackathon during the embargo.</p>
+          <p class="policy-embargo">Embargo ends <time datetime="2027-04-30">April 30, 2027</time></p>
+          <p class="policy-condition">Or when the write-up is published, whichever comes first.</p>
         </div>
         <ul class="policy-details">
           <li>We will publish all evals in a public report and credit everyone.</li>
-          <li>More to come on coordinating the write-up after the event.</li>
+          <li>We’ll coordinate the write-up after the event.</li>
           <li>We’ll share responsible-disclosure guidance throughout the day.</li>
         </ul>
       </section>
@@ -222,7 +219,7 @@
     </main>
 
     <footer class="presenter-controls" aria-label="Presentation controls">
-      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="judges">Judges</button><button data-go="prizes">Prizes</button><button data-go="research-question">Research</button><button data-go="eval-categories">Evals</button><button data-go="tech-setup">Wi-Fi</button><button data-go="harness-demo">Infra onboarding</button><button data-go="hardware-safety">Safety</button><button data-go="map-layout">Layout</button><button data-go="robot-types">Robot access</button><button data-go="communication-policy">Communication</button></nav>
+      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="prizes">Prizes</button><button data-go="research-question">Research</button><button data-go="eval-categories">Evals</button><button data-go="judges">Judges</button><button data-go="tech-setup">Wi-Fi</button><button data-go="harness-demo">Infra onboarding</button><button data-go="hardware-safety">Safety</button><button data-go="map-layout">Layout</button><button data-go="robot-types">Robot access</button><button data-go="communication-policy">Communication</button></nav>
       <div class="utility-controls"><button id="idle-button" class="utility-button" aria-pressed="false" title="Enter idle screen (I)"><span>Idle screen</span></button><button id="motion-button" class="utility-button" aria-pressed="false" title="Pause sponsor strip"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span>Pause</span></button><button id="fullscreen-button" class="icon-button" title="Toggle fullscreen (F)" aria-label="Enter fullscreen">⛶</button><button id="previous-button" class="icon-button" aria-label="Previous section" title="Previous section (Left arrow)">←</button><span id="slide-counter" class="slide-counter" aria-live="polite">1 / 12</span><button id="next-button" class="icon-button" aria-label="Next section" title="Next section (Right arrow or Space)">→</button></div>
     </footer>
   </div>
@@ -231,20 +228,16 @@
     <div class="dialog-header"><h2 id="help-title">Keyboard shortcuts</h2><button id="close-help" class="icon-button" aria-label="Close keyboard shortcuts">×</button></div>
     <dl><div><dt>Next / previous station or section</dt><dd><kbd>→</kbd> <kbd>←</kbd> / <kbd>Page Down</kbd> <kbd>Page Up</kbd></dd></div><div><dt>Next station or section</dt><dd><kbd>Space</kbd></dd></div><div><dt>Welcome</dt><dd><kbd>H</kbd> / <kbd>Home</kbd></dd></div><div><dt>Enter / leave idle screen</dt><dd><kbd>I</kbd></dd></div><div><dt>Leave idle screen</dt><dd><kbd>Esc</kbd></dd></div><div><dt>Fullscreen</dt><dd><kbd>F</kbd></dd></div><div><dt>This guide</dt><dd><kbd>?</kbd></dd></div></dl>
     <p>Sponsors scroll on the welcome screen only. Pause holds the strip; reduced motion shows every sponsor in a static grid. Idle screen hides presenter controls: click the background or press → / Space to begin with Sponsors, or Escape to return to Welcome. Slides never advance automatically.</p>
-    <p>Layout walks through every station before Robot access. Named section links jump directly; returning with Previous starts at the last station. In the expanded map, arrows stop at the first and last stations; use Close map or the labeled boundary button to continue. Space activates a focused button only once.</p>
+    <p>Layout walks through every station before Robot access. Named section links jump directly; returning with Previous starts at the last station. In the expanded map, arrows stop at the first and last stations; Close map returns to the Layout slide. Space activates a focused button only once.</p>
   </dialog>
   <dialog id="map-dialog" class="map-dialog" aria-labelledby="expanded-map-title">
     <div class="dialog-header"><h2 id="expanded-map-title">Layout</h2><div class="map-dialog-tools"><button id="map-zoom-out" class="icon-button" aria-label="Zoom map out">−</button><button id="map-zoom-in" class="icon-button" aria-label="Zoom map in">+</button><button data-close-dialog class="icon-button" aria-label="Close expanded map">×</button></div></div>
     <div class="expanded-map-scroll"><div id="expanded-map-figure" class="expanded-map-figure">
-      <img src="assets/venue-map.svg?v=single-arm" alt="Updated floorplan with company-labeled robot stations and You are here at the presentation area.">
+      <img src="assets/venue-map.svg?v=layout-privacy" alt="Updated floorplan with company-labeled robot stations and You are here at the presentation area.">
       <div class="map-highlights" id="expanded-map-highlights"></div>
       <div class="station-popup" id="expanded-station-popup" aria-hidden="true" hidden></div>
       <div id="expanded-map-markers" class="map-markers"></div>
     </div></div>
-    <div class="station-walkthrough" role="group" aria-label="Expanded robot station walkthrough">
-      <span class="station-progress" data-station-progress>Loading stations…</span>
-      <div class="station-actions"><button class="station-step" data-station-step="-1" disabled>Previous station</button><button class="station-step" data-station-step="1" disabled>Next station</button></div>
-    </div>
   </dialog>
   <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
   <noscript><div class="noscript-message">Enable JavaScript for section navigation and sponsor assets.</div></noscript>

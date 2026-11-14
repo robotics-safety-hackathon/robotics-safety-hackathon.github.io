@@ -77,13 +77,13 @@ h3 { font-size: 2.8cqw; line-height: 1.2; letter-spacing: -.025em; }
 .sponsor-name { color: var(--muted); font-size: 1.5cqw; line-height: 1.3; margin-top: .7cqw; text-align: center; }
 .welcome-logo { width: 24cqw; flex-shrink: 0; }
 .logo-fallback { font-size: 1.7cqw; text-align: center; }
-.sponsors-slide h2 { margin-bottom: 1.5cqw; }
-.sponsor-board { display: flex; flex: 1; min-height: 0; flex-direction: column; justify-content: space-between; gap: 1.2cqw; text-align: center; }
-.sponsor-group { display: flex; flex-direction: column; align-items: center; gap: .8cqw; }
+.sponsors-slide h2 { font-size: 4.8cqw; margin-bottom: 1.5cqw; }
+.sponsor-board { display: flex; flex: 1; min-height: 0; flex-direction: column; justify-content: space-between; gap: 2.2cqw; text-align: center; }
+.sponsor-group { display: flex; flex-shrink: 0; flex-direction: column; align-items: center; gap: .8cqw; }
 .sponsor-group-label { font-size: 1.6cqw; font-weight: 500; color: var(--muted); }
 .sponsor-group-logos { display: flex; justify-content: center; gap: 3cqw; width: 100%; align-items: center; }
 .sponsor-logo { position: relative; flex: 0 1 16cqw; }
-.sponsor-logo img { height: 4.8cqw; }
+.sponsor-logo img { height: 4.2cqw; }
 .sponsor-logo .sponsor-name { color: var(--ink); font-size: 1.6cqw; font-weight: 500; margin-top: .4cqw; }
 .sponsor-group[data-group="partners"] .sponsor-logo { flex-basis: 20cqw; }
 .sponsor-group[data-group="partners"] .sponsor-name { font-size: 2cqw; }
@@ -112,18 +112,23 @@ h3 { font-size: 2.8cqw; line-height: 1.2; letter-spacing: -.025em; }
 .organizers { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 3cqw; border-top: 1px solid var(--line); padding-top: 1.4cqw; margin-top: 2cqw; }
 .organizers strong { display: block; color: var(--ink); font-size: 1.9cqw; font-weight: 500; }
 .organizers span { display: block; font-size: 1.45cqw; margin-top: .4cqw; }
-.policy-message { margin: 3cqw 0; }
-.policy-instruction { color: var(--ink); font-size: 3.8cqw; font-weight: 500; line-height: 1.15; letter-spacing: -.025em; max-width: 80cqw; }
-.policy-embargo { font-size: 1.65cqw; margin-top: 1.5cqw; }
-.policy-details { margin: auto 0 1cqw; padding: 2cqw 0 0; border-top: 1px solid var(--line); list-style: none; display: grid; gap: 1.5cqw; font-size: 2.2cqw; line-height: 1.3; }
-.prize-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 1.5cqw; text-align: left; }
-.prize-table th, .prize-table td { padding: .85cqw 1cqw .85cqw 0; border-bottom: 1px solid var(--line); }
-.prize-table thead th { font-size: 1.65cqw; font-weight: 400; color: var(--muted); }
+.policy-message { margin: 1.5cqw 0 3cqw; }
+.policy-instruction { color: var(--ink); font-size: 2.6cqw; font-weight: 500; line-height: 1.25; letter-spacing: -.02em; }
+.policy-embargo { color: var(--ink); font-size: 1.6cqw; margin-top: 2.4cqw; }
+.policy-embargo time { display: block; margin-top: .4cqw; font-size: 5cqw; font-weight: 500; line-height: 1.1; letter-spacing: -.03em; }
+.policy-condition { color: var(--ink); font-size: 2.2cqw; margin-top: .8cqw; }
+.policy-details { margin: 0; padding: 2cqw 0 0; border-top: 1px solid var(--line); list-style: none; display: grid; gap: 1.3cqw; font-size: 2.1cqw; line-height: 1.3; }
+.prizes-slide h2 { font-size: 4.8cqw; margin-bottom: 1cqw; }
+.prize-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: .5cqw; text-align: left; font-variant-numeric: tabular-nums; }
+.prize-table th, .prize-table td { padding: 1cqw 1.5cqw 1cqw 0; border-bottom: 1px solid var(--line); }
+.prize-table thead th { vertical-align: bottom; font-size: 1.65cqw; font-weight: 400; color: var(--muted); padding-bottom: 1.2cqw; }
+.prize-provider-logo { display: block; width: 14cqw; max-width: 100%; height: 2.8cqw; object-fit: contain; object-position: left center; margin-bottom: .9cqw; }
+.prize-provider-logo[src$="twelvelabs.svg"] { filter: brightness(0); }
 .prize-table tbody th { font-size: 2.3cqw; font-weight: 500; }
 .prize-table td { font-size: 2.6cqw; }
-.prize-table tbody tr:first-child { font-weight: 600; }
-.winning-team-prizes { margin-top: auto; padding-top: 2.5cqw; }
-.winning-team-prizes h3 { font-size: 1.8cqw; color: var(--muted); font-weight: 400; margin-bottom: 1.5cqw; }
+.prize-table tbody tr:first-child > * { font-weight: 600; border-bottom-color: var(--ink); }
+.winning-team-prizes { margin-top: 2cqw; }
+.winning-team-prizes h3 { font-size: 1.8cqw; color: var(--muted); font-weight: 400; margin-bottom: 1.3cqw; }
 .prize-extras { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; }
 .prize-extras strong { display: block; color: var(--ink); font-size: 2.4cqw; font-weight: 500; line-height: 1.2; }
 .prize-extras span { display: block; font-size: 1.6cqw; margin-top: .7cqw; }
@@ -178,11 +183,6 @@ h3 { font-size: 2.8cqw; line-height: 1.2; letter-spacing: -.025em; }
 .station-popup-logo { flex: 0 0 4cqw; width: 4cqw; min-width: 20px; }
 .station-popup-logo img { width: 100%; height: clamp(20px, 4cqw, 42px); }
 .station-popup-logo .logo-fallback { font-size: inherit; }
-.station-walkthrough { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-top: .8cqw; margin-top: .8cqw; border-top: 1px solid var(--line); }
-.station-progress { color: var(--muted); font-size: max(14px, 1.4cqw); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.station-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
-.station-step { padding: 7px 0; text-align: left; font-size: max(14px, 1.4cqw); line-height: 1.4; text-decoration: underline; text-decoration-color: #bbb; text-underline-offset: 4px; }
-.station-step:hover:not(:disabled) { text-decoration-color: #111; }
 .harness-diagram { display: grid; grid-template-columns: 19cqw 9cqw minmax(0, 1fr); align-items: center; gap: 2cqw; flex: 1; min-height: 0; margin: 0; }
 .harness-console { text-align: center; font-size: 2.2cqw; line-height: 1.25; }
 .harness-console svg { display: block; width: 100%; margin-bottom: .8cqw; }
@@ -217,8 +217,6 @@ kbd { font: inherit; }
 .expanded-map-figure { position: relative; width: 100%; min-width: 100%; container-type: inline-size; }
 .expanded-map-figure > img { width: 100%; height: auto; display: block; }
 .expanded-map-figure .map-marker { font-size: max(11px, .85cqw); width: 1.6cqw; height: 1.6cqw; min-width: 24px; min-height: 24px; }
-.map-dialog .station-walkthrough { padding-top: 12px; margin-top: 16px; }
-.map-dialog .station-progress, .map-dialog .station-step { font-size: 16px; }
 .map-dialog .station-popup { width: min(500px, 64%); max-width: calc(96vw - 56px); }
 .map-dialog .station-popup-illustration { height: clamp(100px, 15cqw, 200px); }
 .map-dialog .station-popup-label { font-size: clamp(16px, 2.6cqw, 30px); }
@@ -280,7 +278,7 @@ kbd { font: inherit; }
   .logo-surface { --logo-unit: 2.8cqw; }
   .logo-surface img { height: 15cqw; }
   .welcome-logo { width: 58cqw; }
-  .sponsors-slide h2 { margin-bottom: 8cqw; }
+  .sponsors-slide h2 { font-size: 11.5cqw; margin-bottom: 8cqw; }
   .sponsor-board { gap: 9cqw; }
   .sponsor-group { gap: 4cqw; }
   .sponsor-group-label { font-size: 4.8cqw; }
@@ -313,11 +311,16 @@ kbd { font: inherit; }
   .organizers { grid-template-columns: 1fr; gap: 4cqw; padding-top: 4cqw; margin-top: 6cqw; }
   .organizers strong { font-size: 5cqw; }
   .organizers span { font-size: 4.2cqw; margin-top: 1cqw; }
-  .policy-message { margin: 5cqw 0 8cqw; }
-  .policy-instruction { font-size: 8cqw; max-width: none; }
-  .policy-embargo { font-size: 4.5cqw; margin-top: 4cqw; }
-  .policy-details { margin: 0; padding-top: 6cqw; gap: 6cqw; font-size: 5.8cqw; }
+  .policy-message { margin: 2cqw 0 6cqw; }
+  .policy-instruction { font-size: 6cqw; }
+  .policy-embargo { font-size: 4.2cqw; margin-top: 6cqw; }
+  .policy-embargo time { font-size: 10cqw; margin-top: 1.5cqw; }
+  .policy-condition { font-size: 5cqw; margin-top: 2cqw; }
+  .policy-details { padding-top: 5cqw; gap: 4cqw; font-size: 5cqw; }
+  .prizes-slide h2 { font-size: 11.5cqw; margin-bottom: 5cqw; }
   .prize-table { margin-top: 2cqw; }
+  .prize-provider-logo { width: 26cqw; height: 6.5cqw; margin-bottom: 2.5cqw; }
+  .prize-extras .prize-provider-logo { width: 32cqw; height: 8cqw; margin-bottom: 3cqw; }
   .prize-table th, .prize-table td { padding: 4cqw 2cqw 4cqw 0; vertical-align: top; }
   .prize-table thead th { font-size: 3.8cqw; }
   .prize-table tbody th { font-size: 4.5cqw; }
@@ -345,9 +348,6 @@ kbd { font: inherit; }
   .map-panel { width: 100%; }
   .map-figure { width: 100%; }
   .map-marker { font-size: 2cqw; width: 4cqw; height: 4cqw; }
-  .station-walkthrough { margin-top: 5cqw; padding-top: 3cqw; }
-  .station-progress, .station-step { font-size: max(14px, 3.6cqw); }
-  .station-actions { width: 100%; gap: 8px 16px; }
   .station-popup-logo img { height: clamp(18px, 3.5cqw, 36px); }
   .harness-diagram { grid-template-columns: 1fr; gap: 5cqw; }
   .harness-console { width: 50cqw; justify-self: center; font-size: 5.8cqw; }

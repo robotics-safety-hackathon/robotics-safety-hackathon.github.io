@@ -146,16 +146,6 @@
       $(id).setAttribute('aria-label', label);
       $(id).title = `${label} (${key})`;
     }
-    document.querySelectorAll('[data-station-progress]').forEach((node) => {
-      node.textContent = index < 0 ? 'Loading stations…' : `Station ${index + 1}/${stations.length}`;
-    });
-    document.querySelectorAll('[data-station-step]').forEach((button) => {
-      const previous = Number(button.dataset.stationStep) < 0;
-      const boundary = previous ? index === 0 : index === stations.length - 1;
-      const label = previous ? previousLabel : nextLabel;
-      button.disabled = index < 0;
-      button.textContent = button.closest('dialog') && boundary ? `Close map · ${label}` : label;
-    });
   }
 
   function motionPaused() {
@@ -473,9 +463,6 @@
   });
   $('previous-button').addEventListener('click', () => stepPresentation(-1));
   $('next-button').addEventListener('click', () => stepPresentation(1));
-  document.querySelectorAll('[data-station-step]').forEach((button) => {
-    button.addEventListener('click', () => walkStations(Number(button.dataset.stationStep)));
-  });
   const mapResizeObserver = new ResizeObserver(positionStationPopups);
   mapViews.forEach((view) => mapResizeObserver.observe($(view.figure)));
   document.querySelector('.expanded-map-scroll').addEventListener('scroll', positionStationPopups, { passive: true });
@@ -570,7 +557,7 @@
   async function loadAssets() {
     const results = await Promise.allSettled([
       loadJSON('assets/sponsors.json?v=meeting-notes'),
-      loadJSON('assets/stations.json?v=single-arm'),
+      loadJSON('assets/stations.json?v=layout-privacy'),
       loadJSON('assets/event-details.json', false),
       loadJSON('assets/judges.json', false)
     ]);

@@ -125,21 +125,6 @@
     "providerId": "dimensional",
     "description": "Humanoid robot.",
     "robotModel": "Unitree G1",
-    "x": 37.1146,
-    "y": 36.9113,
-    "footprint": {
-      "x": 28.996690918170504,
-      "y": 37.26558267215295,
-      "width": 8.231397810832798,
-      "height": 12.40088746059447
-    }
-  },
-  {
-    "id": "unitree-g1-pantheon",
-    "label": "Unitree G1 · Pantheon",
-    "providerId": "pantheon",
-    "description": "Humanoid robot.",
-    "robotModel": "Unitree G1",
     "x": 36.199,
     "y": 68.0747,
     "footprint": {
