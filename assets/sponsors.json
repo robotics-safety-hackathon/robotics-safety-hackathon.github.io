@@ -3,7 +3,8 @@
     "id": "pantograph",
     "name": "Pantograph",
     "groups": [
-      "partners"
+      "partners",
+      "robots"
     ],
     "logo": "assets/logos/pantograph.svg",
     "png": "assets/logos/pantograph.png",
@@ -41,6 +42,15 @@
     "background": "light"
   },
   {
+    "id": "google-deepmind",
+    "name": "Google DeepMind",
+    "groups": [
+      "models"
+    ],
+    "logo": "assets/logos/google-deepmind.svg",
+    "background": "light"
+  },
+  {
     "id": "markov",
     "name": "Markov.inc",
     "groups": [
@@ -74,7 +84,7 @@
   },
   {
     "id": "bluedot",
-    "name": "BlueDot",
+    "name": "BlueDot Impact",
     "groups": [
       "funding"
     ],

@@ -7,7 +7,8 @@
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const groups = [
     { id: 'partners', label: 'Partners' },
-    { id: 'compute', label: 'Compute' },
+    { id: 'compute', label: 'Model credits' },
+    { id: 'models', label: 'Models only' },
     { id: 'robots', label: 'Robots' },
     { id: 'funding', label: 'Funding' }
   ];
@@ -99,6 +100,7 @@
       announce(`${current + 1} of ${slides.length}: ${slides[current].dataset.title}`);
     }
     if (focusWasInSlide) $('presentation').focus({ preventScroll: true });
+    if (previous !== current) window.scrollTo(0, 0);
     updateMotion();
     // Hide the outgoing section immediately: only the incoming section fades,
     // so rapid navigation cannot leave ghosts or outgoing focusable controls.
@@ -217,7 +219,7 @@
   }
 
   function sponsorsFor(group) {
-    const orderedIds = group === 'robots' ? ['markov', 'robocurve', 'pantheon', 'dimensional'] : null;
+    const orderedIds = group === 'robots' ? ['pantograph', 'robocurve', 'markov', 'dimensional', 'pantheon'] : null;
     const matches = sponsors.filter((sponsor) => sponsor.groups.includes(group));
     return orderedIds ? matches.sort((a, b) => orderedIds.indexOf(a.id) - orderedIds.indexOf(b.id)) : matches;
   }
@@ -258,7 +260,7 @@
   }
 
   function renderSponsorStrip() {
-    const roles = { partners: 'Partner', compute: 'Compute', robots: 'Robot provider', funding: 'Funding' };
+    const roles = { partners: 'Partner', compute: 'Model credits', models: 'Models only', robots: 'Robot provider', funding: 'Funding' };
     const track = element('div', 'sponsor-track');
     // Equal-width copies include their trailing gap, so -50% is one exact loop.
     for (let copy = 0; copy < 2; copy += 1) {
@@ -557,7 +559,7 @@
 
   async function loadAssets() {
     const results = await Promise.allSettled([
-      loadJSON('assets/sponsors.json'),
+      loadJSON('assets/sponsors.json?v=meeting-notes'),
       loadJSON('assets/stations.json'),
       loadJSON('assets/event-details.json', false),
       loadJSON('assets/judges.json', false)

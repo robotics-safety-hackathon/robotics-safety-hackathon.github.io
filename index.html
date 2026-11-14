@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Robotics Safety Hackathon — sponsors, setup, robot stations, venue layout, and safety briefing.">
+  <meta name="description" content="Robotics Safety Hackathon — research, sponsors, Wi-Fi, safety, robot access, and misalignment eval categories.">
   <title>Robotics Safety Hackathon</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="access.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=meeting-notes">
+  <script src="access.js?v=meeting-notes" defer></script>
 </head>
 <body class="access-locked">
   <main id="access-gate" class="access-gate" aria-labelledby="access-title">
@@ -43,13 +43,25 @@
         <div id="sponsor-board" class="sponsor-board" aria-label="Sponsors by contribution"></div>
       </section>
 
-      <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
-        <h2 id="judges-title">Judges</h2>
-        <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
+
+      <section class="slide research-slide" id="research-question" data-title="Research" aria-labelledby="research-title" hidden>
+        <div class="research-layout">
+          <div>
+            <h2 id="research-title">Where do safeguards break down on real robots?</h2>
+            <p>Find early indicators of robotic misalignment.</p>
+            <p>Test safety ideas across diverse real robots.</p>
+          </div>
+          <img src="assets/robot-illustrations/pandroid.svg" alt="Pandroid mobile robot line illustration">
+        </div>
+        <div class="organizers" aria-label="Co-organizers">
+          <p><strong>Camille</strong><span>Pantograph</span></p>
+          <p><strong>Xavier</strong><span>OpenAI safety fellow</span></p>
+          <p><strong>Edward Sun</strong><span>MATS fellow · formerly Anthropic</span></p>
+        </div>
       </section>
 
-      <section class="slide" id="tech-setup" data-title="Setup" aria-labelledby="tech-title" hidden>
-        <h2 id="tech-title">Setup</h2>
+      <section class="slide" id="tech-setup" data-title="Wi-Fi" aria-labelledby="tech-title" hidden>
+        <h2 id="tech-title">Wi-Fi &amp; Slack</h2>
         <div class="setup-layout">
           <div class="setup-instructions">
             <dl class="wifi-details" aria-label="Event Wi-Fi">
@@ -57,22 +69,31 @@
               <div><dt>Password</dt><dd>makeGoodThings</dd></div>
             </dl>
             <ul class="setup-checklist">
-              <li>Check your tools and compute access.</li>
-              <li>Meet your station lead.</li>
+              <li>Check your tools and model access.</li>
+              <li>Bathroom codes will be posted in Slack.</li>
             </ul>
           </div>
           <aside class="slack-join" id="slack-join" hidden aria-label="Event Slack"></aside>
         </div>
       </section>
 
-      <section class="slide robots-slide" id="robot-types" data-title="Robots" aria-labelledby="robots-title" hidden>
-        <h2 id="robots-title">Robots</h2>
-        <p class="section-description">Pandroids, YAM and OpenYAM arms, Nero Arms, Unitree G1, and Unitree GO2.</p>
-        <div id="robot-providers" class="robot-providers" aria-label="Robot providers"></div>
-      </section>
 
+      <section class="slide" id="hardware-safety" data-title="Safety" aria-labelledby="safety-title" hidden>
+        <div class="section-heading"><h2 id="safety-title">Safety</h2><span class="presenter-credit">Mason or Aiden</span></div>
+        <div class="illustrated-layout">
+          <ul class="safety-list">
+            <li>Brief with your station lead.</li>
+            <li>Know the physical emergency stop.</li>
+            <li>Keep the operating area clear.</li>
+            <li>Stop if unsure. Alert your lead.</li>
+          </ul>
+          <figure class="technical-figure">
+            <img src="assets/robot-safety-diagram.svg" alt="YAM-inspired robot arm line drawing with briefing, stop-awareness, and clear-workspace symbols. Illustrative, not a stop-control location diagram.">
+          </figure>
+        </div>
+      </section>
       <section class="slide map-slide" id="map-layout" data-title="Layout" aria-labelledby="map-title" hidden>
-        <div class="section-heading"><h2 id="map-title">Layout</h2><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div>
+        <div class="section-heading"><h2 id="map-title">Layout</h2><div class="map-heading-actions"><span class="presenter-credit">Walkthrough · Aiden</span><button class="text-button" id="expand-map" aria-haspopup="dialog">Expand map</button></div></div>
           <div class="map-panel">
             <div class="map-figure" id="map-figure">
               <img id="venue-map" src="assets/venue-map.svg" alt="Updated architectural floorplan with company-labeled robot stations and a You are here marker at the presentation area.">
@@ -88,7 +109,7 @@
       </section>
 
       <section class="slide demo-slide" id="harness-demo" data-title="Harness demo" aria-labelledby="demo-title" hidden>
-        <h2 id="demo-title">Harness demo</h2>
+        <div class="section-heading"><h2 id="demo-title">Harness demo</h2><span class="presenter-credit">Aiden</span></div>
         <figure class="harness-diagram" aria-label="Harness control and observations across the event's robot embodiments">
           <div class="harness-console">
             <svg viewBox="0 0 220 170" fill="none" aria-hidden="true">
@@ -116,26 +137,63 @@
           </div>
         </figure>
       </section>
+      <section class="slide robots-slide" id="robot-types" data-title="Robot access" aria-labelledby="robots-title" hidden>
+        <h2 id="robots-title">Robot access</h2>
+        <ol class="access-steps">
+          <li>Reserve a robot slot.</li>
+          <li>Alternate robot time with free model access.</li>
+          <li>Record interesting observations.</li>
+        </ol>
+        <ol class="day-wrap" aria-label="End-of-day sequence">
+          <li>Wrap-up call</li><li>Final runs</li><li>Submission prep</li>
+        </ol>
+        <div id="robot-providers" class="robot-providers" aria-label="Robot providers"></div>
+      </section>
 
-      <section class="slide" id="hardware-safety" data-title="Safety" aria-labelledby="safety-title" hidden>
-        <h2 id="safety-title">Safety</h2>
-        <div class="illustrated-layout">
-          <ul class="safety-list">
-            <li>Brief with your station lead.</li>
-            <li>Know the physical emergency stop.</li>
-            <li>Keep the operating area clear.</li>
-            <li>Stop if unsure. Alert your lead.</li>
-          </ul>
-          <figure class="technical-figure">
-            <img src="assets/robot-safety-diagram.svg" alt="YAM-inspired robot arm line drawing with briefing, stop-awareness, and clear-workspace symbols. Illustrative, not a stop-control location diagram.">
-          </figure>
+      <section class="slide eval-slide" id="eval-categories" data-title="Eval categories" aria-labelledby="eval-title" hidden>
+        <div class="section-heading"><h2 id="eval-title">Eval categories</h2><span class="presenter-credit">Edward</span></div>
+        <div class="eval-grid">
+          <section class="eval-group" aria-labelledby="eval-input">
+            <h3 id="eval-input">Input info</h3>
+            <ol>
+              <li>Information-seeking and exploration</li>
+              <li>Multiple principals and authority</li>
+            </ol>
+          </section>
+          <section class="eval-group" aria-labelledby="eval-goals">
+            <h3 id="eval-goals">Goal pursuit</h3>
+            <ol start="3">
+              <li>Power-seeking, empowerment, and irreversibility</li>
+              <li>Compositional harm</li>
+              <li>In-context reward misspecification and underspecification</li>
+            </ol>
+          </section>
+          <section class="eval-group" aria-labelledby="eval-control">
+            <h3 id="eval-control">Control fundamentals</h3>
+            <ol start="6">
+              <li>Long-horizon oversight and monitorability</li>
+              <li>Corrigibility and interruptibility</li>
+              <li>Safe movement and fallback</li>
+            </ol>
+          </section>
+          <section class="eval-group" aria-labelledby="eval-evidence">
+            <h3 id="eval-evidence">Threats to evidence</h3>
+            <ol start="9">
+              <li>Eval metagaming / realism gaps</li>
+            </ol>
+          </section>
         </div>
+      </section>
+
+      <section class="slide judges-slide" id="judges" data-title="Judges" aria-labelledby="judges-title" hidden>
+        <div class="section-heading"><h2 id="judges-title">Judges</h2><span class="presenter-credit">Judging · Edward</span></div>
+        <div id="judges-grid" class="judges-grid" aria-label="Confirmed judges and their organizations"></div>
       </section>
     </main>
 
     <footer class="presenter-controls" aria-label="Presentation controls">
-      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="judges">Judges</button><button data-go="tech-setup">Setup</button><button data-go="robot-types">Robots</button><button data-go="map-layout">Layout</button><button data-go="harness-demo">Harness demo</button><button data-go="hardware-safety">Safety</button></nav>
-      <div class="utility-controls"><button id="idle-button" class="utility-button" aria-pressed="false" title="Enter idle screen (I)"><span>Idle screen</span></button><button id="motion-button" class="utility-button" aria-pressed="false" title="Pause sponsor strip"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span>Pause</span></button><button id="fullscreen-button" class="icon-button" title="Toggle fullscreen (F)" aria-label="Enter fullscreen">⛶</button><button id="previous-button" class="icon-button" aria-label="Previous section" title="Previous section (Left arrow)">←</button><span id="slide-counter" class="slide-counter" aria-live="polite">1 / 8</span><button id="next-button" class="icon-button" aria-label="Next section" title="Next section (Right arrow or Space)">→</button></div>
+      <nav class="section-nav" aria-label="Sections"><button data-go="welcome" aria-current="step">Welcome</button><button data-go="sponsors">Sponsors</button><button data-go="research-question">Research</button><button data-go="tech-setup">Wi-Fi</button><button data-go="hardware-safety">Safety</button><button data-go="map-layout">Layout</button><button data-go="harness-demo">Harness</button><button data-go="robot-types">Robot access</button><button data-go="eval-categories">Evals</button><button data-go="judges">Judges</button></nav>
+      <div class="utility-controls"><button id="idle-button" class="utility-button" aria-pressed="false" title="Enter idle screen (I)"><span>Idle screen</span></button><button id="motion-button" class="utility-button" aria-pressed="false" title="Pause sponsor strip"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span>Pause</span></button><button id="fullscreen-button" class="icon-button" title="Toggle fullscreen (F)" aria-label="Enter fullscreen">⛶</button><button id="previous-button" class="icon-button" aria-label="Previous section" title="Previous section (Left arrow)">←</button><span id="slide-counter" class="slide-counter" aria-live="polite">1 / 10</span><button id="next-button" class="icon-button" aria-label="Next section" title="Next section (Right arrow or Space)">→</button></div>
     </footer>
   </div>
 
