@@ -268,7 +268,7 @@
       group.setAttribute('role', 'list');
       if (copy === 1) group.setAttribute('aria-hidden', 'true');
       sponsors.forEach((sponsor) => {
-        const logo = createLogo(sponsor, 'welcome-logo', false);
+        const logo = createLogo(sponsor, 'welcome-logo', ['pantograph', 'robocurve', 'markov'].includes(sponsor.id));
         logo.setAttribute('role', 'listitem');
         logo.append(element('span', 'sponsor-role', sponsor.groups.map((role) => roles[role]).join('\n')));
         group.append(logo);
